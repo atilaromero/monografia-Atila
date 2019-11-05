@@ -1,6 +1,3 @@
-\section{Data carving categories}
-\label{sec:data-carving-taxonomies}
-
 Ali et al. \cite{ali_review_2018} divide the data carving process in three steps:
     identification, which classifies the file type of individual chunks of data; 
     validation, which includes a list of requirements of a file that are needed for its recovery to be considered successful; and
@@ -20,26 +17,4 @@ Beebe et al. \cite{beebe_sceadan:_2013} identify three content-based approaches 
 
 A summary of the categorization schemes is depicted on Table \ref{tab:categories}. As Nadeem \cite{nadeem_ashraf_forensic_2013} does not specifically mention machine learning, it is left out of generation classification.
 
-\begin{table*}[!ht]
-    \centering
-    \caption{Data carving categories}
-    \label{tab:categories}
-    \begin{tabular}{ l | l | l | c }
-      \multicolumn{3}{l|}{Steps}                                 & Generation\\
-      \hline\hline
-      Identification    & extension-based   &                   &   \\
-                        \cline{2-3}
-                        & magic bytes-based &                   & \multirow{-2}{*}{1\textsuperscript{st}}\\
-                        \cline{2-4}
-                        & content-based     & semantic          &   \\
-                                            \cline{3-3}
-                        &                   & non-semantic      & \multirow{-2}{*}{2\textsuperscript{nd}}\\
-                                            \cline{3-4}
-                        &                   & machine learning  &  --- \\
-      \hline
-      Validation        &                   &                   & 2\textsuperscript{nd} \\
-      \hline
-      Reassembling      &                   &                   & 3\textsuperscript{rd}\\
-      \hline
-    \end{tabular}
-\end{table*}
+\input{content/tables/3.2-categories.tex}

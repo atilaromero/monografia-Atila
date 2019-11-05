@@ -1,6 +1,3 @@
-\section{Systematic mapping study on data carving}
-\label{sec:data-carving-sms}
-
 A Systematic Mapping Study (SMS) is a secondary study performed to 
 find and aggregate best available evidence on a specific topic \cite{petersen_systematic_2008}.
 
@@ -98,4 +95,5 @@ All these works applied some form of dimensionality reduction on the input data 
 Hiester \cite{hiester_file_2018} apparently was the first to utilize a LSTM network to perform file fragment classification. He compared results using three types of neural networks: feedforward, convolutional, and long short-term memory. The goal was to classify the data type of individual sectors (512 bytes), considering four file types: CSV, XML, JPG and GIF. For that, each bit was translated into two features, resulting in 8192 features per sector. First and last sectors of each file in the training set were discarded. In the experiments, the datasets were limited to one gigabyte to fit on memory.
 
 Table \ref{tab:datacarvingstudies} summarizes the  machine learning techniques used in each data carving study.
-\input{content/3.1-table.tex}
+
+\input{content/tables/3.1-table.tex}

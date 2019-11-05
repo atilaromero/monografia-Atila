@@ -1,0 +1,23 @@
+\begin{table*}[!ht]
+    \centering
+    \caption{Data carving categories}
+    \label{tab:categories}
+    \begin{tabular}{ l | l | l | c }
+      \multicolumn{3}{l|}{Steps}                                 & Generation\\
+      \hline\hline
+      Identification    & extension-based   &                   &   \\
+                        \cline{2-3}
+                        & magic bytes-based &                   & \multirow{-2}{*}{1\textsuperscript{st}}\\
+                        \cline{2-4}
+                        & content-based     & semantic          &   \\
+                                            \cline{3-3}
+                        &                   & non-semantic      & \multirow{-2}{*}{2\textsuperscript{nd}}\\
+                                            \cline{3-4}
+                        &                   & machine learning  &  --- \\
+      \hline
+      Validation        &                   &                   & 2\textsuperscript{nd} \\
+      \hline
+      Reassembling      &                   &                   & 3\textsuperscript{rd}\\
+      \hline
+    \end{tabular}
+\end{table*}
