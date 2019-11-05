@@ -1,0 +1,49 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{lscape}
+\begin{landscape}
+\begin{table}[!ht]
+\caption{Sequence labeling studies}
+\label{tab:sequencelabelingstudies}
+\footnotesize
+\begin{tabular}{l|l|l|l|l|l|l|l|l|l|l}
+
+\multicolumn{1}{c|}{Study}                                  & \multicolumn{4}{c|}{Main topic}                                                   & \multicolumn{6}{c}{Aplication}                                        \\ \hline
+
+                                                             & CRF                  & NN           & LSTM        & Other                         & 1         & 2 & 3 & 4 & 5 & 6 \\ \hline\hline
+Graves \cite{graves_supervised_2012}                         &                      &              & overview    &                               &             & x      &             &         &        &                        \\ \hline
+Deng and Li \cite{deng_machine_2013}                         &                      &              &             & ML overview                   &             & x      &             &         &        &                        \\ \hline
+Schmidhuber \cite{schmidhuber_deep_2015}                     &                      &              &             & ML historical overview        &             &        &             &         &        &                        \\ \hline
+\hline
+Daf{\'e} et al. \cite{dafe_learning_2015}                    &                      &              &             & AC-SC and &             &        &             & x       &        & x                      \\ 
+                    &                      &              &             & pattern silhouettes &             &        &             & x       &        & x                      \\ \hline
+\hline
+Cuong et al. \cite{cuong_conditional_2014}                   & high-order CRF       &              &             &                               &             &        & x           &         &        & x                      \\ \hline
+Chatzis and Demiris \cite{chatzis_infinite-order_2013}       & infinite order CRF   &              &             &                               & x           &        & x           &         & x      &                        \\ \hline
+Wang and Zhang \cite{wang_ica_2013}                          & HCRF                 &              &             &                               &             &        &             &         & x      &                        \\ \hline
+Song et al. \cite{song_multi-view_2012}                      & MV-LDCRF             &              &             &                               &             &        &             &         & x      &                        \\ \hline
+Papadopoulos and Tzanetakis \cite{papadopoulos_models_2017}  & CRF vs HMM           &              &             &                               &             &        &             &         &        &                        \\ \hline
+Jeong and Lee \cite{jeong_triangular-chain_2008}             & triangular-chain CRF &              &             &                               &             &        &             &         &        &                        \\ \hline
+\hline
+Irsoy and Cardie \cite{irsoy_opinion_2014}                   &                      & CRF vs RNN   &             &                               &             &        &             &         &        & x                      \\ \hline
+Zhang et al. \cite{zhang_nonrecurrent_2017}                  &                      & cFSMN        &             &                               &             & x      &             &         &        &                        \\ \hline
+Zhao et al. \cite{zhao_recurrent_2017}                       &                      & RCNN vs LSTM &             &                               &             &        &             &         &        &                        \\ \hline
+Cui et al. \cite{cui_continuous_2016}                        &                      & HTM vs LSTM  &             &                               &             &        &             &         &        &                        \\ \hline
+\hline
+Nguyen et al. \cite{nguyen_recurrent_2018}                   &                      &              & CRF + BLSTM &                               &             &        &             &         &        & x                      \\ \hline
+Xie et al. \cite{xie_fully_2016}                             &                      &              & FCRN        &                               &             &        & x           &         &        &                        \\ \hline
+Fang et al. \cite{fang_deepasl:_2017}                        &                      &              & HB-RNN      &                               &             &        &             &         & x      &                        \\ \hline
+Veli\v{c}kovi\'{c} et al. \cite{velickovic_cross-modal_2018} &                      &              & X-LSTM      &                               &             &        &             &         &        &                        \\ \hline
+Tjandra et al. \cite{tjandra_gated_2016}                     &                      &              & LSTM+GRU    &                               & x           &        &             &         &        &                        \\ \hline
+Liu et al. \cite{liu_global_2017}                            &                      &              & GCA-LSTM    &                               &             &        &             &         & x      &                        \\ \hline
+Feng et al. \cite{feng_attention_2018}                       &                      &              & CA-LSTM     &                               &             &        &             &         &        & x                      \\ %\hline
+\multicolumn{11}{l}{}\\ \hline
+\multicolumn{11}{l}{Application reference:}\\
+\multicolumn{11}{l}{1 - POS tagging}\\
+\multicolumn{11}{l}{2 - Speech recognition}\\
+\multicolumn{11}{l}{3 - Handwriting	recognition}\\
+\multicolumn{11}{l}{4 - Protein sequence analysis}\\
+\multicolumn{11}{l}{5 - Action recognition}\\
+\multicolumn{11}{l}{6 - Information extraction}\\ \hline
+\end{tabular}
+\end{table}
+\end{landscape}

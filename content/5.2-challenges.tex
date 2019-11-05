@@ -1,0 +1,20 @@
+% \section{Challenges}
+\label{sec:data-carving-challenges}
+
+The work of Hiester \cite{hiester_file_2018} has shown that LSTM neural networks have good potential in the data carving field. But, as happens with studies applying LSTM models to speech recognition, where many researchers have contributed with different models, adjustments, modifications, and innovations, also in the field of data carving field it is important to further advance the research. Important aspects that require attention include support for a wider range of file types, handle fragmentation through reassembling, and make the task of supporting the carving of a new file type easier.
+
+Each of the steps cited by Ali et al. \cite{ali_review_2018} for the data carving process deals with a main challenge. The identification step is responsible for classifying the file type. The quantity and diversity of file types, together with the accuracy and precision of the results, are the main challenges in identification. The second step, validation, also deals with classification, but it is a complementary step to the previous one to reduce false positives, often using a different technique. For that reason, validation challenges are similar to the identification ones. The last step, reassembling, has fragmentation as its main challenge.
+
+In the current proposal, a new type of challenge is introduced. Instead of using previous knowledge of the file structure to improve carving results, \textbf{would be possible to do the inverse and use insights from the carving process to reveal structures in the file?}
+
+For example, suppose a file has a fixed size field, a 32 bit unsigned integer representing a datetime value. 
+For that type of field, the insight may come in the form of an expected range. Still using the datetime example, a possible outcome would be the observation that a certain kind of file always presents that field value inside some range, that coincides with a range often observed in datetime fields. That does not prove the unknown field to be a datetime but suggests that direction.
+
+Few structures are so simple as a group of fixed sized fields. It is very common, for example, to use a field to specify the length of the next field. Another type of complexity increase occurs when the value of a field establishes which specification should be used in the remaining of the file, changing which fields should be expected next.
+
+The greater the complexity of an unknown file structure is, the more difficult it is to unravel its specification, but also the more useful it is to count with tools that automatize that task. Otherwise, the only option is to manually write the specification or the parser, possibly relying on reverse engineering techniques.
+
+The direct utility of the discovery of file type structures is the extraction of values from its fields. This information has value for itself, but could also be used to improve validation and even reassembling.
+
+Another concern that can be explored and is pertinent to possibly all of the previous studies combining neural networks and data carving is that their datasets and results may not reflect the same situations that would be faced on a real forensic scenario, where the distribution of file types may be different and the occurrence of unknown and untreated formats may be frequent. Therefore, more realistic datasets are important to improve research validation. 
+

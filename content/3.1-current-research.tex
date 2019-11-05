@@ -1,0 +1,101 @@
+\section{Systematic mapping study on data carving}
+\label{sec:data-carving-sms}
+
+A Systematic Mapping Study (SMS) is a secondary study performed to 
+find and aggregate best available evidence on a specific topic \cite{petersen_systematic_2008}.
+
+The employed background research methodology was inspired by PICO (Population, Intervention, Comparison, Outcome) criteria \cite{kitchenham_guidelines_2007}.
+
+To assess the current research status on data carving machine learning technologies, the following research question was defined:
+
+\begin{enumerate}[itemindent=\parindent,label=\textbf{RQ\arabic*.}]
+    \item What machine learning algorithms have already been applied in the data carving field?
+\end{enumerate}
+
+To conduct the search, the following digital libraries were used: 
+ACM (\url{https://dl.acm.org/}),
+IEEE (\url{https://ieeexplore.ieee.org/}),
+Scopus (\url{https://www.scopus.com/}),
+and
+Springer Link (\url{https://link.springer.com/}).
+
+The terms chosen to address this question are shown in Table \ref{tab:dataterms}, resulting in the search strings presented in  Figure \ref{fig:datasearchstring}.
+
+To choose those terms, generic expressions were used, to increase the number of results. But even using this strategy, the number of papers found was low. Comparison and Outcome terms were intentionally not used to avoid further reduction of results.
+
+\begin{table*}[!ht]
+    \centering
+    \caption{Terms used}
+    \label{tab:dataterms}
+    \begin{tabular}{ l  l }
+      Structure 	& Terms 		\\
+      \hline\hline
+      Population 	& data-carving \\   
+                    & data carving \\
+      \hline
+      Intervention 	& machine learning \\
+                    & neural networks \\
+      \hline
+    \end{tabular}
+\end{table*}
+
+\begin{figure}[!ht]
+  \centering
+  \fbox{\parbox{\textwidth}{\centering
+    (``data carving'' AND ``machine learning'')\\
+    (``data-carving'' AND ``machine learning'')\\
+    (``data carving'' AND ``neural networks'')\\
+    (``data-carving'' AND ``neural networks'')
+  }}
+  \caption{Search strings}
+  \label{fig:datasearchstring}
+\end{figure}
+
+
+This initial approach brought few results, only four of which were considered relevant: \cite{alamri_taxonomy_2014}, 
+\cite{ali_review_2018}, \cite{sportiello_context-based_2012}, and \cite{beebe_sceadan:_2013}. But using citations and references of these four works, the initial results were expanded and gave a more comprehensive view of current research on using machine learning techniques to perform data carving.
+
+% In 2014, 
+Alamri and Allen \cite{alamri_taxonomy_2014} created a taxonomy of file type identification techniques, grouped by the following broad categories: statistical learning, frequency distribution, statistical analysis, and detection of file fragments. The statistical learning category is subdivided in supervised and unsupervised leaning. The supervised learning techniques, which are the more relevant for this proposal, are Support Vector Machine (SVM), k-Nearest Neighbor (kNN), and Neural Network (NN). According to this taxonomy study, SVM is used in \cite{ahmed_fast_2011}, \cite{amirani_feature-based_2013}, \cite{beebe_sceadan:_2013}, \cite{fitzgerald_using_2012}, \cite{gopal_statistical_2011}, and \cite{sportiello_context-based_2012}, kNN is used in \cite{ahmed_fast_2011} and \cite{gopal_statistical_2011}, while neural networks are used in \cite{ahmed_fast_2011}, \cite{ahmed_content-based_2010}, \cite{amirani_new_2008}, \cite{amirani_feature-based_2013}, and \cite{penrose_approaches_2013}.
+
+% In 2018, 
+Ali et al. \cite{ali_review_2018} reviewed digital forensics methods for JPEG file carving. JPEG is mentioned in that paper as a common focus among data carving studies. Only some of the analyzed studies utilize some machine learning technique:
+neural networks are used in \cite{xu_reassembling_2009} and \cite{amirani_feature-based_2013},
+SVM is used in \cite{qiu_new_2014}, \cite{zhang_svm_2016}, and \cite{sportiello_file_2011},
+kNN is used in \cite{axelsson_normalised_2010},
+and Extreme Learning Machine (ELM) is used in \cite{zhang_svm_2016} and \cite{ali_classification_2018}.
+
+
+Other works studying machine learning techniques applied to data carving include: \cite{luigi_file_2011} using SVM,
+and Conti et al. \cite{conti_automated_2010} using kNN to classify low-level primitive types, like ASCII text, compressed data, bitmap, and encoded schemes.
+
+According to Ali et al. \cite{ali_review_2018}, artificial intelligence techniques are found to be not fully utilized in this field. The relatively low research activity in the field could be an explanation for the research aspect of this observation. But when tools are considered, the technological gap is even bigger, as will be discussed in section 4.
+
+% In 2005, 
+Dunhan et al. \cite{dunham_classifying_2005} have successfully identified file type of encrypted files. First, they used a two-level neural network to identify files encrypted with the same key. Then, within each group of files, they used a three-level neural network to identify file types, using file deltas created with exclusive-or as input to the neural network. 
+
+% In 2007, 
+Harris \cite{harris_using_2007} described the attempt to use a neural network in data carving, but the neural networks tested were not considered better than the existing methods.
+
+% In 2008, 
+Amirami et al.  \cite{amirani_new_2008} used Principal Component Analysis (PCA) as input for a 5 layer feed-forward auto-associative unsupervised neural network to do feature extraction and a 3 layer Multi Layer Perceptron (MLP) to perform classification. They used a similar approach in 2013 \cite{amirani_feature-based_2013}. 
+Among the studies found, this was the first to provide a viable alternative to classical data carving tools using a neural network approach. 
+% 2013 work compared with svm
+
+Other neural network works worth mentioning are:
+% In 2009, 
+Xu and Dong \cite{xu_reassembling_2009}, using a neural network as a cluster reassembling technique for JPEG image fragments;
+% network structure not detailed
+% In 2010, 
+Ahmed et al. \cite{ahmed_content-based_2010}, using byte frequency as input to a neural network that performed file type classification and using a similar approach in their later work \cite{ahmed_fast_2011};
+% In 2013, 
+Penrose et al. \cite{penrose_approaches_2013}, using compression rate as the input to a neural network to distinguish between compressed and encrypted files;
+% In 2014, 
+Maslim et al. \cite{maslim_distributed_2014}, using Principal Component Analysis (PCA) of byte frequency distribution as input to a Gene Regulatory Engine (GRE) and a Distributed Adaptative Neural Network (DANN).
+All these works applied some form of dimensionality reduction on the input data before performing classification.
+
+% In 2018, 
+Hiester \cite{hiester_file_2018} apparently was the first to utilize a LSTM network to perform file fragment classification. He compared results using three types of neural networks: feedforward, convolutional, and long short-term memory. The goal was to classify the data type of individual sectors (512 bytes), considering four file types: CSV, XML, JPG and GIF. For that, each bit was translated into two features, resulting in 8192 features per sector. First and last sectors of each file in the training set were discarded. In the experiments, the datasets were limited to one gigabyte to fit on memory.
+
+Table \ref{tab:datacarvingstudies} summarizes the  machine learning techniques used in each data carving study.
+\input{content/3.1-table.tex}

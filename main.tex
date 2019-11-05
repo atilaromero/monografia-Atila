@@ -1,0 +1,121 @@
+\documentclass[english,oneside]{pucrs-ppgcc}
+%\documentclass[english,twoside]{pucrs-ppgcc}
+
+% Pacotes e opções já incluídas automaticamente:
+% \RequirePackage[T1]{fontenc}[2005/09/27]
+% \RequirePackage[utf8x]{inputenc}[2008/03/30]
+% \RequirePackage[english,brazil]{babel}[2008/07/06]
+% \RequirePackage[a4paper]{geometry}[2010/09/12]
+% \RequirePackage{textcomp}[2005/09/27]
+% \RequirePackage{lmodern}[2009/10/30]
+% \RequirePackage{indentfirst}[1995/11/23]
+% \RequirePackage{setspace}[2000/12/01]
+% \RequirePackage{textcase}[2004/10/07]
+% \RequirePackage{float}[2001/11/08]
+% \RequirePackage{amsmath}[2000/07/18]
+% \RequirePackage{amssymb}[2009/06/22]
+% \RequirePackage{amsfonts}[2009/06/22]
+% \RequirePackage{url}
+% \RequirePackage[table]{xcolor}[2007/01/21]
+%\RequirePackage{array}[2008/09/09]
+%\RequirePackage{longtable}
+
+\usepackage{graphicx}
+%\usepackage[pdftex]{graphicx}
+\usepackage{multirow}
+\usepackage{nicefrac}
+% \usepackage{subfigure}
+%\usepackage[algo2e]{algorithm2e}
+\usepackage{algorithmic}
+\usepackage{bookmark}
+\usepackage{import}
+\usepackage{todonotes}
+\usepackage{enumitem}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\setcitestyle{square}
+\usepackage{lscape}
+
+\author{Atila Leites Romero}
+
+\title{Data carving usando redes neurais LSTM}
+      {Data carving using LSTM neural networks}
+
+%\tipotrabalho{\monografia}  % Monografias em geral (e de "bônus": TCCs)
+\tipotrabalho{\pep}         % Plano de estudo e pesquisa
+%\tipotrabalho{\dissertacao} % Dissertação
+%\tipotrabalho{\ptese}       % Proposta de tese
+%\tipotrabalho{\tese}        % Tese
+
+%\grau{\bacharel} % Este é "bônus"
+\grau{\mestre}
+%\grau{\doutor}
+
+\orientador{Dr. Avelino Francisco Zorzo}
+%\coorientador{Ciclano de Farias}
+
+\begin{document}
+
+%\dedicatoria{Dedico este trabalho à minha família.}
+%
+%\epigrafe{If we are offered several hypotheses, we should begin our considerations by striking the most complex of them with our sword.}
+         %{Isaac Asimov}
+
+% \dedigrafe{Dedico este trabalho à minha família.}
+%           {If we are offered several hypotheses, we should begin our considerations by striking the most complex of them with our sword.}
+%           {Isaac Asimov}
+
+\begin{agradecimentos}
+%O presente trabalho foi realizado com apoio da Coordenação de Aperfeiçoamento de Pessoal Nivel Superior – Brasil (CAPES) – Código de Financiamento 001
+This study was financed in part by the Coordenação de Aperfeiçoamento de Pessoal de NivelSuperior – Brasil (CAPES) – Finance Code 001.
+
+I would also like to acknowledge the support provided by the Pontifical Catholic University of Rio Grande do Sul (PUCRS), by the National Institutes of Science and Technology (INCT) and by my advisor Dr. Avelino Francisco Zorzo during the preparation of this proposal.
+
+\end{agradecimentos}
+
+\begin{resumo}{computação forense, \textit{carving}, aprendizado de máquina, redes neurais, \textit{long short-term memory}}
+
+O trabalho proposto tem como objetivos aprimorar o uso de redes neurais \textit{Long Short-Term Memory} (LSTM) em \textit{data carving}, investigar como a construção de software de \textit{data carving} pode ser automatizada total ou parcialmente usando essa tecnologia e buscar uma solução prática na qual uma comunidade de peritos forenses possa construir, de forma colaborativa, modelos para vários tipos de arquivos.
+
+
+Para embasar o  trabalho, dois estudos de mapeamento sistemático foram conduzidos.
+No primeiro, o foco foram pesquisas em \textit{data carving} que utilizassem aprendizado de máquina. Duas conclusões principais foram alcançadas: que o volume de pesquisa em \textit{data carving} é baixo em comparação com outras áreas de pesquisa e que as ferramentas disponíveis que suportam uma ampla variedade de formatos de arquivos não tiram proveito das tecnologias mais recentes em \textit{data carving}.
+
+No segundo estudo sistemático, o foco foram pesquisas em \textit{sequence labeling}, que é o campo do aprendizado de máquina que estuda o problema genérico que \textit{data carving} enfrenta: a classificação de uma sequência de itens relacionados. A expectativa desta busca por pesquisas não necessariamente relacionadas a \textit{data carving}, mas focadas no problema genérico de \textit{sequence labeling}, é realizar uma transferência de conhecimento, aplicando na área forense os estudos mais atuais sobre aprendizado de máquina. O estudo aponta LSTM como uma alternativa viável para \textit{data carving}.
+
+\end{resumo}
+
+\begin{abstract}{computer forensics, carving, machine learning, neural networks, long short-term memory}
+
+The proposed work aims to advance the research on the use of Long Short-Term Memory (LSTM) neural networks to perform data carving, investigate how the construction of data carving software can be fully or partially automated using this technology, and apply the findings towards a practical solution in which the forensic examiners community can collaboratively build models for several file types.
+
+To support the work, two Systematic Mapping Studies (SMS) were conducted.
+In the first one, the focus was on data carving research using machine learning. Two main conclusions were reached: that the volume of research in data carving is low in comparison to other areas of research and that the available tools that support a wide variety of file formats do not take advantage of the latest technologies in data carving.
+
+In the second Systematic Mapping Study, the focus was on sequencing labeling, which is the field of machine learning that studies the generic problem that data carving faces: to classify a sequence of related items. The expectation of this search for studies not necessarily mentioning data carving, but focused on the generic problem of sequence labeling, is to perform a knowledge transfer, applying in the forensic area the most current studies on machine learning. The SMS indicated LSTM as a viable alternative to data carving.
+\end{abstract}
+
+% \listoffigures       % Lista de figuras      (OPCIONAL)
+% \listoftables        % Lista de tabelas      (OPCIONAL)
+% \listofalgorithms    % Lista de algoritmos   (OPCIONAL)
+% \listofacronyms      % Lista de siglas       (OPCIONAL)
+% \listofabbreviations % Lista de abreviaturas (OPCIONAL)
+% \listofsymbols       % Lista de símbolos     (OPCIONAL)
+\tableofcontents     % Sumário              (OBRIGATÓRIO)
+
+\subimport{content/}{0-chapters}
+
+\bibliographystyle{ppgcc-alpha}
+% \bibliographystyle{ppgcc-num}
+% \bibliographystyle{apalike}
+\bibliography{zotero}
+
+% \appendix
+% \chapter{Meu primeiro apêndice}
+% \chapter{My second appendix}
+
+% \anexos
+% \chapter{Meu primeiro anexo}
+% \chapter{My second attachment}
+
+\end{document}

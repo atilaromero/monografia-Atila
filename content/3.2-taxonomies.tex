@@ -1,0 +1,45 @@
+\section{Data carving categories}
+\label{sec:data-carving-taxonomies}
+
+Ali et al. \cite{ali_review_2018} divide the data carving process in three steps:
+    identification, which classifies the file type of individual chunks of data; 
+    validation, which includes a list of requirements of a file that are needed for its recovery to be considered successful; and
+    reassembling, which attempts to reconstruct the original file.
+
+Some of the studies found deal only with the identification step, which has applications of its own, while others also include the challenge of achieving reassembling.
+
+Nadeem \cite{nadeem_ashraf_forensic_2013} groups the carving techniques in three generations, each extending the previous one.
+The first generation is a header-footer based carving. It uses file signatures like magic-bytes, headers, and footers to identify the beginning and end of a file.
+The second generation is structure based carving, also called ``semantic carving'' or ``deep carving''. It reduces the number of false positives by using file structure knowledge to perform validation.
+The third generation advances reassembling with methods to deal with fragmentation. It tries to infer relationships and order between chunks of data based on content and statistical analysis to reassemble the original file.
+
+For file type detection, which could be mapped to the identification step in the  process steps of Ali et al. \cite{ali_review_2018}, Amirami et al. \cite{amirani_new_2008} cite three categories: extension-based identification, magic bytes-based identification, and content-based identification.
+In extension-based identification, the content of the file is ignored and only its filename extension is used. Magic bytes-based identification uses signatures, generally a fixed string, usually at the beginning of a file. It is a common strategy that uses header/footer, but not all files adopt it. Content-based identification identifies the file using some statistical modeling of its content.
+
+Beebe et al. \cite{beebe_sceadan:_2013} identify three content-based approaches to classify file and data types, also referring only to the identification step of the Ali et al. \cite{ali_review_2018} data carving process division: semantic parsing, nonsemantic parsing, and machine learning. Semantic parsing relies on the file structure to identify its type. Nonsemantic parsing searches for strings that are commonly found in specific files. Machine learning uses supervised and unsupervised algorithms, like Support Vector Machine (SVM), k-Nearest Neighbor (kNN), and Neural Networks (NN).
+
+A summary of the categorization schemes is depicted on Table \ref{tab:categories}. As Nadeem \cite{nadeem_ashraf_forensic_2013} does not specifically mention machine learning, it is left out of generation classification.
+
+\begin{table*}[!ht]
+    \centering
+    \caption{Data carving categories}
+    \label{tab:categories}
+    \begin{tabular}{ l | l | l | c }
+      \multicolumn{3}{l|}{Steps}                                 & Generation\\
+      \hline\hline
+      Identification    & extension-based   &                   &   \\
+                        \cline{2-3}
+                        & magic bytes-based &                   & \multirow{-2}{*}{1\textsuperscript{st}}\\
+                        \cline{2-4}
+                        & content-based     & semantic          &   \\
+                                            \cline{3-3}
+                        &                   & non-semantic      & \multirow{-2}{*}{2\textsuperscript{nd}}\\
+                                            \cline{3-4}
+                        &                   & machine learning  &  --- \\
+      \hline
+      Validation        &                   &                   & 2\textsuperscript{nd} \\
+      \hline
+      Reassembling      &                   &                   & 3\textsuperscript{rd}\\
+      \hline
+    \end{tabular}
+\end{table*}
