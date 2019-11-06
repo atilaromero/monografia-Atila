@@ -1,0 +1,21 @@
+% \levelB{Objective}
+In this research, different neural networks are trained and validated
+at the file fragment identification task. Their accuracy is then compared,
+to identify which models should be considered or disregarded.
+
+%\levelB{Models}
+The networks under consideration used different combinations of convolutional, max pooling, LSTM, and fully connected layers,
+%loss
+applying categorical cross-entropy as the loss function. Binary cross-entropy and mean squared error were considered during initial tests, but categorical cross-entropy gave faster training times.
+
+Fourteen models participated in this evaluation. One of then is a simple single-layer perceptron. Two of them use LSTM layers without convolutional layers, while 3 of them use convolutional layers without LSTM layers. Eight models combine convolutional layers and LSTM layers. Table \ref{tab:models} outline the parameters of the models, which can be analyzed in more detail in the code repository \sloppy\url{http://github.com/atilaromero/carving-experiments}. The convolutional layers do not use padding. 
+
+\input{content/tables/4.0.1-models.tex}
+
+%optimization
+All the trainings used the Adam \cite{kingma_adam:_2014}
+optimization algorithm to guide backpropagation, which was selected because it performed well in the preliminary tests without requiring fine-tuning of parameters.
+
+% Constraints
+The models were trained until no further improvement was observed in the last 10 epochs, using categorical cross entropy loss.
+

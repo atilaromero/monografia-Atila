@@ -6,9 +6,8 @@ For example, while doing data carving on a hard drive, a software could sequenti
 
 The patterns searched by data carving software are generally manually coded, taking advantage of fixed byte sequences found on headers and footers. But the amount of different file types combined with the slow process of manually coding each of those patterns makes the development of data carving software a tedious task \cite{mcdaniel_content_2003}.
 
-The application of machine learning solutions to this manual task has the potential to make it easier and faster. An initial strategy could be to train a classifier to, given a chunk of data, provide a label indicating a file type. That could be used to recover unfragmented deleted files.
+The application of machine learning solutions to this manual task has the potential to make it easier and faster. The two tasks that could most likely benefit from the usage of machine learning techniques are file fragment classification and file reassembling. File fragment classification aims to identify the original type of file from which a given block of data was extracted. Reassembling is the attempt to reconstruct a file from pieces that may be out of order and mixed with pieces from other files.
 
-The recovery of fragmented files through data carving would require some sort of pattern recognition on the identified chunks, in order to reconstruct the correct sequence.
+Sequence labeling is a branch of machine learning that seeks to attribute labels to a sequence of instances related to each other.
 
-The proposed work aims to advance the research on the use of Long Short-Term Memory (LSTM) neural networks to perform data carving, investigate how the construction of data carving software can be fully or partially automated using this technology, and apply the findings towards a practical solution in which the forensic examiners community     can collaboratively build models for several file types.
-
+This work describes the current state of art in data carving and in sequence labeling, exploring how neural networks can be applied in file fragment classification and reassembling.

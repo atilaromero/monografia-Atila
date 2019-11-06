@@ -63,10 +63,9 @@ kNN is used in \cite{axelsson_normalised_2010},
 and Extreme Learning Machine (ELM) is used in \cite{zhang_svm_2016} and \cite{ali_classification_2018}.
 
 
-Other works studying machine learning techniques applied to data carving include: \cite{luigi_file_2011} using SVM,
-and Conti et al. \cite{conti_automated_2010} using kNN to classify low-level primitive types, like ASCII text, compressed data, bitmap, and encoded schemes.
+Conti et al. \cite{conti_automated_2010} used kNN to classify low-level primitive types, like ASCII text, compressed data, bitmap, and encoded schemes.
 
-According to Ali et al. \cite{ali_review_2018}, artificial intelligence techniques are found to be not fully utilized in this field. The relatively low research activity in the field could be an explanation for the research aspect of this observation. But when tools are considered, the technological gap is even bigger, as will be discussed in section 4.
+According to Ali et al. \cite{ali_review_2018}, artificial intelligence techniques are found to be not fully utilized in this field. The relatively low research activity in the field could be an explanation for the research aspect of this observation.
 
 % In 2005, 
 Dunhan et al. \cite{dunham_classifying_2005} have successfully identified file type of encrypted files. First, they used a two-level neural network to identify files encrypted with the same key. Then, within each group of files, they used a three-level neural network to identify file types, using file deltas created with exclusive-or as input to the neural network. 
@@ -93,6 +92,24 @@ All these works applied some form of dimensionality reduction on the input data 
 
 % In 2018, 
 Hiester \cite{hiester_file_2018} apparently was the first to utilize a LSTM network to perform file fragment classification. He compared results using three types of neural networks: feedforward, convolutional, and long short-term memory. The goal was to classify the data type of individual sectors (512 bytes), considering four file types: CSV, XML, JPG and GIF. For that, each bit was translated into two features, resulting in 8192 features per sector. First and last sectors of each file in the training set were discarded. In the experiments, the datasets were limited to one gigabyte to fit on memory.
+
+Chen \textit{et al.} \cite{chen_file_2018}
+used a Convolutional Neural Network (CNN) with 5 convolutional layers and 3 fully connected layers to classify fragments of 4096 bytes, converting each fragment into a 64x64 grayscale picture.
+
+Wang \textit{et al.} \cite{wang_sparse_2018} 
+used sparse dictionaries for n-grams to extract features of 512 bytes fragments, using this as input to an SVM classifier.
+% They used 18 file types from the Govdocs1 dataset
+% : csv, doc, docx, gif, gz, html, jpg, pdf, png, ppt, pptx, ps, rtf, swf, txt, xls, xlsx, and xml.
+
+Wang \textit{et al.} \cite{wang_file_2018}  
+compared CNN, SVM, kNN, and XGboost, with fragments of different sizes, converting each byte to a 256 length vector (one-hot encoding). The CNN combined 3 parallel convolutional layers of widths 4, 8, and 16.
+They used 20 file types from the Govdocs1 dataset.
+% : csv, doc, html, pdf, gif, jpg, dbase3, f, txt, swf, ps, java, log, xml, xls, ppt, gz, unk, rtf, and png.
+
+Vulinović \textit{et al.} \cite{vulinovic_neural_2019}
+compared a CNN with MLP, using 512 raw bytes as the CNN input, and byte histograms as input to the MLP.
+% They used 18 file types from the Govdocs1 dataset
+% : csv, doc, docx, gif, gz, html, jpg, pdf, png, ppt, pptx, ps, rtf, swf, txt, xls, xlsx, and xml.
 
 Table \ref{tab:datacarvingstudies} summarizes the  machine learning techniques used in each data carving study.
 

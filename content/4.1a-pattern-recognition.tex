@@ -1,41 +1,10 @@
 The data carving field, despite being actively studied, does not have the number of research papers that other fields have. This implies that improvements in current data carving techniques are likely to use knowledge transferred from other areas. While in a machine learning search the excess of relevant papers becomes a problem, an equivalent data carving search may face a scarcity of relevant papers.
 
-But, in order to find a field of study that describes the data carving problem in a more generic manner, the correct terminology must be used. Essentially, data carving could be described as a  ``pattern recognition'' problem, but this term is almost as broad as ``machine learning'', as some of the unsuccessful first search attempts showed. Using ``automatic pattern recognition'' was a slight improvement, but still not precise enough.
-
-The interpretation of the inner structure of a file is usually done by parsers, which use a representation of that structure to extract or transform the file's content. But bibliography on parsers generally refers to language parsers, dealing with questions not entirely applicable to data carving, which is why the searches using the term ``parser'' were also unsuccessful.
-
-% \todo[inline]{book?}
-Although it is not good practice to use Wikipedia as a source of scientific research, it is arguably an acceptable starting point to gather terms referring to broad fields of study. With that reasoning, a Wikipedia search was conducted to find a better term to the problem. Several pages related to machine learning were read, in an empirical search for links that could lead to a potential better term. The most useful result was found at \url{https://en.wikipedia.org/wiki/Pattern\_recognition} \cite{wikipedia_pattern_2018}, giving the following glossary of pattern recognition algorithms:
-    % classification algorithms,
-    % clustering algorithms,
-    % ensemble learning algorithms,
-    % general algorithms for predicting arbitrarily-structured
-    % sets of labels,
-    % multilinear subspace learning algorithms,
-    % real-valued sequence labeling algorithms,
-    % regression algorithms, and
-    % sequence labeling algorithms.
-% \begin{itemize}
-    classification algorithms,
-    which are supervised algorithms predicting categorical labels, clustering algorithms,
-    which are unsupervised algorithms predicting categorical labels,
-    ensemble learning algorithms,
-    which are supervised meta-algorithms for combining multiple learning algorithms together,
-    multilinear subspace learning algorithms,
-    that predict labels of multidimensional data using tensor representations,
-    real-valued sequence labeling algorithms,
-    that predict sequences of real-valued labels,
-    regression algorithms, 
-    that predict real-valued labels,
-    and sequence labeling algorithms, 
-    that predict sequences of categorical labels.
-% \end{itemize}
-
 % \todo[inline]{review this}
 It is important to notice that different classes of algorithms would be suitable for different learning objectives.
 A clustering algorithm could be used to group fragments of data with unknown structure.
-A classification algorithm could be used to attribute labels to each disk sector, which is related to the identification step of data carving. 
-Sequence labeling was the algorithm class selected to be further studied, as it considers relations between labels on a sequence, which is often the case when classifying consecutive sectors of a disk. This could lead to better classification and to reassembling of fragmented data.
+A classification algorithm could be used to attribute labels to each disk sector, which is relevant to file fragment classification. 
+Sequence labeling considers relations between labels on a sequence, which is often the case when classifying consecutive sectors of a disk. It has potential to be used in file fragment classification and in reassembling of fragmented data.
 
 Sequence labeling deals with the task of attributing categorical labels to a group of instances where, unlike happens with other classification problems, those instance labels are not independent.
 One example of such task is known as Part Of Speech (POS) tagging, where the goal is, given a word in a sentence, classify it, for example as a noun or a verb.
@@ -44,7 +13,4 @@ The classification of each word is not independent of its surroundings since it 
 Another example of a sequence labeling task is found in speech recognition.
 The sound of a spoken sentence is split into parts and each part receives a label corresponding to a phoneme. But those labels are not independent since some combinations of phonemes are meaningful while others are not. Thus, taking this context into account increases the accuracy of the results.
 
-From those classes of pattern recognition approaches mentioned above, both classification algorithms and sequence labeling algorithms are good choices.
-The difference is that the plain classification method should be easier to implement, while the sequence labeling method is expected to predict the labels better.
-
-Another reason to choose sequence labeling over plain classification is to study if it is possible to extract structure insights from the models, leading to developments in information extraction.
+From those classes of pattern recognition approaches mentioned above, both classification algorithms and sequence labeling algorithms are potentially good choices.
