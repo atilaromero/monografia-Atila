@@ -9,15 +9,19 @@ The anticipation that LSTM models would be a good fit to file fragment classific
 % Using different combinations of layers and parameters, the expectation was that some models would be discarded and some would be selected as promising alternatives. That could be used to guide future researches and also serve as a reference for comparison between studies. 
 The Govdocs1 dataset brought an important basis for comparison to be used between carving solutions. But to achieve easily reproducible results, the models must also be publicly available, a condition not all revised studies fulfill. Being available as Jupyter notebooks at https://github.com/atilaromero/carving-experiments, the results described here should require little effort to be reproduced. Thus the source code to generate models with same architecture of those presented here can be used as a basis of comparison in future researches.
 
+A comparison was made between a chosen model, CLD, and recent works on the field. While CLD achieved slight lower accuracy values than the other studies, it can be noticed that the values are very similar. This is a strong indication that the high  variation that those studies show between each other are caused by the difference in the file types they choose. This supports the claim that advances in this area should come from error analysis instead of model tweaking.
+
 \section{Limitations and threats to validity}
-In this research, the models were not trained until exhaustion. This was initially done to identify which models would be most promising for future testing, but further attempts to tune layer types, quantity and parameters resulted in accuracy values still close to 0.54, which suggests that selection or tuning of models may not be the best approach to improve results.
 
-The 14 models used in this study represent a very small sample of all possible model architectures using the chosen layer types. 
+In this research, the models were not trained until exhaustion. This was initially done to identify which models would be most promising for future testing, but further attempts to tune layer types, quantity and parameters resulted in accuracy values still close to 0.6, which suggests that selection or tuning of models may not be the best approach to improve results.
 
-XXXXXXXXXXXX
+However, the 14 models used in this study represent a very small sample of all possible model architectures using the chosen layer types. Moreover, there is no certainty that in different circumstances the best performing models will continue to outperform the others. For those reasons, the search for an alternative model could also be a valid research direction.
+
+The proposed models use a small number of layers. Since deep networks have shown good results in other applications, a study that increase the number of layers of the models presented here may improve results.
 
 \section{Future work}
-The models required short training times and few examples to approach their limit.
+
+Most models required short training times and few examples to approach their limit.
 This suggests that some patterns were very easy to find but they were insufficient to achieve a higher accuracy.
 This raises the question whether there are harder patterns that could be found by a better model not yet tried or if this a more fundamental issue that would not be solved by a trial and error approach of tweaking of parameters and layer modifications.
 

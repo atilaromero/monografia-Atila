@@ -51,3 +51,20 @@ To check if the two slower models could give better results if executed for a lo
 %stagnation in learning with such short times, combined with low final accuracy suggests that the dataset present some patterns that are easily recognizable, while the rest of the dataset present a very hard classification task.
 
 % \levelC{Limitations and threats to validity}
+
+The model CLD was chosen to be compared with other works because it was among the 3 models with highest accuracy, but achieved its results in less time and showed high resilience to changes in parameters during the tests, while the others did not.
+ 
+In this second stage, using longer training sessions, the accuracy for the 28 file types used in the first stage increased from 0.54 to 0.62. Using the same file types of other works, the CLD model achieved an accuracy of 
+0.66 for the file types from Chen \textit{et al.} \cite{chen_file_2018},
+0.91 for Hiester \cite{hiester_file_2018}, 
+0.59 for Wang \textit{et al.} \cite{wang_sparse_2018},
+0.64 for Wang \textit{et al.} \cite{wang_file_2018},
+and
+0.60 for Vulinović \textit{et al.} \cite{vulinovic_neural_2019}.
+The results can be seen in figure \ref{fig:cldothers}.
+
+\noindent
+\begin{figure*}[htb!]
+\centering\includegraphics[width=0.8\textwidth]{content/CLD-others.png}
+\caption[CLD vs. other studies]{\label{fig:cldothers}The CLD model was trained from scratch using the same file types used in other works. The bar plot shows the comparison between the validation accuracy obtained with CLD and those achieved in other studies.}%
+\end{figure*}

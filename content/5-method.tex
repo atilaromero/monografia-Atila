@@ -19,3 +19,17 @@ optimization algorithm to guide backpropagation, which was selected because it p
 % Constraints
 The models were trained until no further improvement was observed in the last 10 epochs, using categorical cross entropy loss.
 
+After the 14 models were compared, one of the models, CLD, was chosen to have its results compared with other works. A longer training session was performed in this stage, using a batch size of 300 samples instead of 100, and increasing the improvement threshold (how many epochs to wait for improvements) from 10 to 20.
+
+Using this extended training parameters, the CLD model was trained with the 28 file types used in the first stage. Then, a different model was built from scratch using the same file types of each of the most recent works listed in table \ref{tab:datacarvingstudies}: 
+Hiester \cite{hiester_file_2018}, 
+Chen \textit{et al.} \cite{chen_file_2018},
+Wang \textit{et al.} \cite{wang_sparse_2018},
+Wang \textit{et al.} \cite{wang_file_2018},
+and
+Vulinović \textit{et al.} \cite{vulinovic_neural_2019}.
+
+This comparison has three important restrictions.
+Chen used 4096 bytes for the block size, while this work used 512 bytes only.
+Vulinović got an F1-score of 81\% for the Multi Layer Perceptron (MLP) feeded with byte histograms, a better result than the one obtained with a Convolutional Neural Network (CNN) feeded with raw bytes, 61\%. But the comparison with the CLD model of this study was based on Vulinović results with the CNN, not the MLP, because it is a more similar solution, one that uses raw bytes instead of byte histograms. Additionally, his results use F1-score, while this work measured accuracy. 
+

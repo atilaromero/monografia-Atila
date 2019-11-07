@@ -1,0 +1,22 @@
+\begin{table*}[!ht]
+\caption{\label{tab:datacarvingstudies}File fragment classification studies using the Govdocs1 dataset}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+Study                                          & SVM & kNN & NN   & Dataset       & Raw   & Fragment & Number   & Accuracy   & F1-score  \\
+                                               &     &     &      &               & bytes & size     & of types &            &           \\ \hline
+Axelsson \cite{axelsson_normalised_2010}       &     & x   &      & Govdocs1      & No    & 512      & 28       & 34\%       &           \\ \hline
+Fitzgerald et al. \cite{fitzgerald_using_2012} & x   &     &      & Govdocs1      & No    & 512      & 24       & 49\%       & 48\%      \\ \hline
+Beebe et al. \cite{beebe_sceadan:_2013}        & x   &     &      & Govdocs1 +    & No    & 512      & 38       & 73\%       &           \\
+                                               &     &     &      & other sources &       &          &          &            &           \\ \hline
+Hiester \cite{hiester_file_2018}               &     &     & MLP  & Govdocs1      & Yes   & 512      & 4        & 77\%       &           \\
+                                               &     &     & CNN  &               &       &          &          & 73\%       &           \\
+                                               &     &     & LSTM &               &       &          &          & 98\%       &           \\ \hline
+Chen \cite{chen_file_2018}                     &     &     & CNN  & Govdocs1      & Yes   & 4096     & 16       & 71\%       &           \\ \hline
+Wang \cite{wang_sparse_2018}                   & x   &     &      & Govdocs1      & Yes   & 512      & 18       & 61\%       & 61\%      \\ \hline
+Wang \cite{wang_file_2018}                     &     &     & CNN  & Govdocs1      & Yes   & 512      & 20       & 68\%       &           \\
+                                               &     &     &      &               &       & 4096     &          & 78\%       &           \\ \hline
+Vulinovic \cite{vulinovic_neural_2019}         &     &     & MLP  & Govdocs1      & Yes   & 512      & 18       &            & 81\%      \\
+                                               &     &     & CNN  &               &       &          &          &            & 61\%      \\ \hline
+\end{tabular}}
+\end{table*}
