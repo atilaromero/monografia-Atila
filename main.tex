@@ -80,8 +80,12 @@ during the preparation of this work.
 O trabalho proposto apresenta dois estudos de mapeamento sistemático.
 No primeiro, o foco foram pesquisas em \textit{data carving} que utilizassem aprendizado de máquina. Duas conclusões principais foram alcançadas: que o volume de pesquisa em \textit{data carving} é baixo em comparação com outras áreas de pesquisa e que as ferramentas disponíveis que suportam uma ampla variedade de formatos de arquivos não tiram proveito das tecnologias mais recentes em \textit{data carving}.
 
-No segundo estudo sistemático, o foco foram pesquisas em \textit{sequence labeling}, que é o campo do aprendizado de máquina que estuda o problema genérico que \textit{data carving} enfrenta: a classificação de uma sequência de itens relacionados. A expectativa desta busca por pesquisas não necessariamente relacionadas a \textit{data carving}, mas focadas no problema genérico de \textit{sequence labeling}, é realizar uma transferência de conhecimento, aplicando na área forense os estudos mais atuais sobre aprendizado de máquina. 
+No segundo estudo sistemático, o foco foram pesquisas em \textit{sequence labeling}, que é o campo do aprendizado de máquina que estuda o problema genérico que \textit{data carving} enfrenta: a classificação de uma sequência de itens relacionados. 
+% A expectativa desta busca por pesquisas não necessariamente relacionadas a \textit{data carving}, mas focadas no problema genérico de \textit{sequence labeling}, é realizar uma transferência de conhecimento, aplicando na área forense os estudos mais atuais sobre aprendizado de máquina. 
 
+Por fim, quatorze modelos são comparados. A expectativa era identificar os modelos mais promissores, mas aparentemente exite um limite no quanto esses modelos podem ser aprimorados.
+% A expectativa inicial de que os modelos LSTM seriam uma boa opção para classificação de fragmentos de arquivos não foi confirmada. No entanto, bons resultados foram obtidos usando LSTM como camada auxiliar de uma rede neural  predominantemente convolucional (CNN).
+Foi feita uma comparação entre um modelo escolhido, CLD, e os trabalhos recentes neste campo. Enquanto o CLD alcançou valores de precisão ligeiramente menores que os outros estudos, os valores foram semelhantes. Essa é uma indicação de que a alta variação que esses estudos mostram entre si é causada pela diferença nos tipos de arquivo que cada um escolhe. Isso apóia a alegação de que os avanços nessa área devem vir da análise de erros, em vez de ajustes nos modelos.
 \end{resumo}
 
 \begin{abstract}{computer forensics, carving, machine learning, neural networks, long short-term memory}
@@ -89,7 +93,13 @@ No segundo estudo sistemático, o foco foram pesquisas em \textit{sequence label
 The proposed work presents two Systematic Mapping Studies (SMS).
 In the first one, the focus was on data carving research using machine learning. Two main conclusions were reached: that the volume of research in data carving is low in comparison to other areas of research and that the available tools that support a wide variety of file formats do not take advantage of the latest technologies in data carving.
 
-In the second Systematic Mapping Study, the focus was on sequencing labeling, which is the field of machine learning that studies the generic problem that data carving faces: to classify a sequence of related items. The expectation of this search for studies not necessarily mentioning data carving, but focused on the generic problem of sequence labeling, is to perform a knowledge transfer, applying in the forensic area the most current studies on machine learning.
+In the second Systematic Mapping Study, the focus was on sequencing labeling, which is the field of machine learning that studies the generic problem that data carving faces: to classify a sequence of related items.
+% The expectation of this search for studies not necessarily mentioning data carving, but focused on the generic problem of sequence labeling, is to perform a knowledge transfer, applying in the forensic area the most current studies on machine learning.
+
+Finally, fourteen models are compared. 
+The expectation was to identify the most promising models for improvement but an apparent limit was found on how far these models could be improved. 
+% The anticipation that LSTM models would be a good fit to file fragment classification was not confirmed. However, good results were obtained using LSTM as an auxiliary layer to a mainly convolutional neural network (CNN). 
+A comparison was made between a chosen model, CLD, and recent works on the field. While CLD achieved slight lower accuracy values than the other studies, the values were very similar. This is a indication that the high  variation that those studies show between each other are caused by the difference in the file types they choose. This supports the claim that advances in this area should come from error analysis instead of model tweaking.
 \end{abstract}
 
 % \listoffigures       % Lista de figuras      (OPCIONAL)

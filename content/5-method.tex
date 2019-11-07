@@ -19,7 +19,7 @@ optimization algorithm to guide backpropagation, which was selected because it p
 % Constraints
 The models were trained until no further improvement was observed in the last 10 epochs, using categorical cross entropy loss.
 
-After the 14 models were compared, one of the models, CLD, was chosen to have its results compared with other works. A longer training session was performed in this stage, using a batch size of 300 samples instead of 100, and increasing the improvement threshold (how many epochs to wait for improvements) from 10 to 20.
+After the 14 models were compared, one of the models, CLD, was chosen to have its results compared with other works. A longer training session was performed in this stage, using a batch size of 300 samples instead of 100, and increasing the improvement threshold of the early stopping condition (maximum epochs to wait for improvements) from 10 to 20.
 
 Using this extended training parameters, the CLD model was trained with the 28 file types used in the first stage. Then, a different model was built from scratch using the same file types of each of the most recent works listed in table \ref{tab:datacarvingstudies}: 
 Hiester \cite{hiester_file_2018}, 

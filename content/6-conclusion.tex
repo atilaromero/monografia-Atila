@@ -4,12 +4,12 @@ The best accuracy results were from the three models identified as ``CCM'', ``CM
 
 This study evaluated some alternative models in the file fragment classification task. The expectation was to identify the most promising models for improvement. But an apparent limit was found on how far these models could be improved. 
 
-The anticipation that LSTM models would be a good fit to file fragment classification was contradicted: the results of networks using only LSTM layers without convolutional ones were poor in accuracy and training speed. However, good results were obtained using LSTM as an auxiliary layer to a mainly convolutional neural network (CNN). 
+The anticipation that LSTM models would be a good fit to file fragment classification was not confirmed: the results of networks using only LSTM layers without convolutional ones were poor in accuracy and training speed. However, good results were obtained using LSTM as an auxiliary layer to a mainly convolutional neural network (CNN). 
 
 % Using different combinations of layers and parameters, the expectation was that some models would be discarded and some would be selected as promising alternatives. That could be used to guide future researches and also serve as a reference for comparison between studies. 
 The Govdocs1 dataset brought an important basis for comparison to be used between carving solutions. But to achieve easily reproducible results, the models must also be publicly available, a condition not all revised studies fulfill. Being available as Jupyter notebooks at https://github.com/atilaromero/carving-experiments, the results described here should require little effort to be reproduced. Thus the source code to generate models with same architecture of those presented here can be used as a basis of comparison in future researches.
 
-A comparison was made between a chosen model, CLD, and recent works on the field. While CLD achieved slight lower accuracy values than the other studies, it can be noticed that the values are very similar. This is a strong indication that the high  variation that those studies show between each other are caused by the difference in the file types they choose. This supports the claim that advances in this area should come from error analysis instead of model tweaking.
+A comparison was made between a chosen model, CLD, and recent works on the field. While CLD achieved slight lower accuracy values than the other studies, it can be noticed that the values are very similar. This is a indication that the high  variation that those studies show between each other are caused by the difference in the file types they choose. This supports the claim that advances in this area should come from error analysis instead of model tweaking.
 
 \section{Limitations and threats to validity}
 
