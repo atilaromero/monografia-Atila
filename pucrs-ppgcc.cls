@@ -260,7 +260,7 @@ e-mail <rfbpiccoli at gmail dot com>^^J
     \renewcommand*{\pep}{Research plan}
     \renewcommand*{\ptese}{Dissertation proposal}
     \renewcommand*{\dissertacao}{Thesis}
-    \renewcommand*{\monografia}{Thesis}
+    \renewcommand*{\monografia}{Monograph}
     \renewcommand*{\doutor}{Ph.\ D.\ }
     \renewcommand*{\mestre}{Master}
     \renewcommand*{\bacharel}{Bachelor}
